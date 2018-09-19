@@ -7,13 +7,13 @@ int main()
 
     int i = 0;
     //Part 1
-    printf("Char size is %d\n", sizeof(char));
-    printf("Short size is %d\n", sizeof(short));
-    printf("Int size is %d\n", sizeof(int));
-    printf("Long size is %d\n", sizeof(long));
-    printf("Float size is %d\n", sizeof(float));
-    printf("Double size is %d\n", sizeof(double));
-    printf("Long Double size is %d\n\n", sizeof(long double));
+    printf("Char size is %ld\n", sizeof(char));
+    printf("Short size is %ld\n", sizeof(short));
+    printf("Int size is %ld\n", sizeof(int));
+    printf("Long size is %ld\n", sizeof(long));
+    printf("Float size is %ld\n", sizeof(float));
+    printf("Double size is %ld\n", sizeof(double));
+    printf("Long Double size is %ld\n\n", sizeof(long double));
     //Part 2
     if (c1 == c2)
         printf("Char is unsigned\n\n");
