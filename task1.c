@@ -83,6 +83,7 @@ int main()
         printf("Big english letters go one bye one.\nTheir codes are: '%c'-'%c' ~ %d - %d\n",'A','Z','A','Z');
     if (check[1])
         printf("Small english letters go one bye one.\nTheir codes are: '%c'-'%c' ~ %d - %d\n",'a','z','a','z');
+    printf("Space code is %d\n", ' ');
 	
 	if(check[0] && check[1] && check[2])
 	{	
