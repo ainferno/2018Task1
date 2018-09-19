@@ -5,7 +5,7 @@ int main()
     unsigned char c1 = 128;//Data for part 2
     char c2 = 128;
 
-    int i = 0;
+    int i = 0, 	a[3] = {0, 0, 0};
     //Part 1
     printf("Char size is %ld\n", sizeof(char));
     printf("Short size is %ld\n", sizeof(short));
@@ -82,7 +82,36 @@ int main()
     if (check[2])
         printf("Big english letters go one bye one.\nTheir codes are: '%c'-'%c' ~ %d - %d\n",'A','Z','A','Z');
     if (check[1])
-        printf("English letters go one bye one.\nTheir codes are: '%c'-'%c' ~ %d - %d\n",'a','z','a','z');
+        printf("Small english letters go one bye one.\nTheir codes are: '%c'-'%c' ~ %d - %d\n",'a','z','a','z');
+	
+	if(check[0] && check[1] && check[2])
+	{	
+		a[0] = nums[0], a[1] = lat[0], a[2] = latB[0];
+        i = 0;
+		if(a[0] < a[1])
+            if(a[1] > a[2])
+                i = 1;
+        if(a[1] < a[0])
+            if(a[1] < a[2])
+                if(a[0] < a[2])
+                    i=2;
+                else
+                    i=3;
+            else
+                i=5;
+        if(a[2] < a[1] && a[2] < a[0])
+            i = 4;
+		
+        switch(i)
+        {
+            case 0:printf("First go numbers, then small letters, then big letters\n"); break;
+            case 1: printf("First go nunumbers, then big letters, then small letters\n"); break;
+            case 2: printf("First go small letters, then numbers, then big letters\n"); break;
+            case 3: printf("First go small letters, then big letters, then numbers\n"); break;
+            case 4: printf("First go big letters, then numbers, then small letters\n"); break;
+            case 5: printf("First go big letters, then small letters, then numbers\n"); break;
+        }
+	}
 
 
     return 0;
